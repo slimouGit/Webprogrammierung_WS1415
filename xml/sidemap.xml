@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sidemap.xsl" ?>
+<sidemap>
+    <link name="Start">
+        <sublink>Einsendeaufgaben</sublink>
+    </link>
+    <link name="Privat">
+    </link>
+    <link name="Projekte">
+        <sublink>Mediendesign 2</sublink>
+        <sublink>Alibaba</sublink>
+        <sublink>Web-Programmierung</sublink>
+        <sublink>slimou</sublink>
+    </link>
+    <link name="Seminar">
+        <sublink>HTML</sublink>
+        <sublink>CSS</sublink>
+        <sublink>JavaScript</sublink>
+        <sublink>Validierung</sublink>
+        <sublink>Webstandards</sublink>
+        <sublink>Accessibility</sublink>
+        <sublink>Usability</sublink>
+        <sublink>XML</sublink>
+    </link>
+    <link name="Spiel">
+    </link>
+    <link name="Kontakt">
+        <sublink>Impressum</sublink>
+    </link>
+</sidemap>

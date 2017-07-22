@@ -1,0 +1,871 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+5 Layout-Vorgaben:
+
+- @media only screen and (max-width: 699px)
+- @media only screen and (min-width: 700px)
+- @media only screen and (min-width: 1024px)
+- gilt fuer alle Aufloesungen ausser Print
+    (Memory-Spiel)
+- @media print
+*/
+
+/*Normalize importieren*/
+@import url('normalize.css');
+
+/*Schriften importieren*/
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Paytone+One);
+
+
+/*Desktop Layout bis 699px*/
+
+@media only screen and (max-width: 699px) {
+   
+    
+/*SCHRIFTEN*/    
+h1 {
+    font-size: 1.3em;    }
+h2 {
+    font-size: 1.5em;
+    width: 80%;    }
+p {
+    font-size: 1.1em;    }
+
+
+/*LISTEN*/
+dt {
+    float: left;
+    text-align: left;
+    width: 70%;
+    padding: 1px 1px 0px 3px;
+    margin-bottom: 2px;
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.0);
+    box-shadow: 3px 3px 3px #7C7C7C;    }
+dd {
+    visibility: hidden;
+    display: none;    }
+li, ul, .li_ohne {
+    font-size: 1.1em;    }
+    
+
+/*MENUE*/
+nav {
+	top: 0px;
+	width: 100%;
+	height: 105px;
+    left: 0px; 
+    padding-top: 0px;
+    box-shadow: 2px 2px 10px rgba(0,0,0, .6);    }
+nav ol {
+    padding: 0px;
+    margin: 0px;  
+    font-size: 20px; }
+/*Ausrichtung und Erscheinung des Menues = 6 Button in 2 Zeilen*/
+nav ol li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    float:left;
+    background-color: #fff;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    width: 33%; }
+/*Ausrichtung und Groesse des ausgeklappten Menue*/
+nav ol li a {
+    display: block;
+    padding: 15px 20px; }
+/*Mouse-Over 1. Ebene*/
+nav ol li.link:hover a{
+    background-color: #f63400; color: #fff; }
+/*Erscheinung Untermenue*/
+nav ol li.link:hover > ol li a{
+    background-color: #f63400; color: #fff; width: 200%; font-size: 13px; border: 1px solid #000;  }
+/*Untermenue erscheint bei Mouse-Over*/
+nav ol li:hover > ol {
+    visibility: visible; }
+/*Ausrichtung und Sichtbarkeit des Untermenues*/
+nav ol li ol{
+    display: inline;
+    visibility: hidden;
+    position: absolute;    }
+/*Schriftschnitt und Farbe des aktiven Links*/
+nav ol li:hover > a {
+    font-weight: bold;
+    color: #FAFAFA; }
+/*Anordnung des ausgeklappten Untermenues*/
+nav ol li ol li{
+	float: none; }
+
+
+/* BEREICHE */
+header {
+    height: 95px;
+	background-color: rgba(255,255,255,0.9);
+	padding-left: 5px; 
+	margin-bottom: 15px;
+	z-index: 60;}
+main {
+    top: 105px;
+   	width: 100%;
+	left: 0px;
+	margin: 15px 0px 0px 0px;
+	padding: 0px 0px 50px 5px;    }
+footer {
+    visibility: hidden;
+    display: none;    }
+cite {
+    font-size: 1.1em;    } 
+#funktion {
+    position: fixed;
+	bottom: 0px;
+    width: 100%;
+    right: 0px;
+    margin: 0px 0px 0px 20px;
+	padding: 0px 0px 0px 0px;
+	z-index: 85;
+	background-color: rgba(255,255,255,0.7);
+	padding-left: 5px; 
+	margin-bottom: 0px;
+	z-index: 60;
+	box-shadow: 2px -2px 5px rgba(0,0,0, .6);	}
+#drucken {
+    float: left;
+    font-size: 18px;
+    line-height: 5px;
+    text-decoration: underline;
+    padding-left: 20px;
+    color: #333 !important;
+    width: 45%;
+    bottom: 0px;}
+#sidemap {
+    float: right;
+    font-size: 18px;
+    line-height: 5px;
+    text-decoration: underline;
+    color: #333 !important;
+    width: 40%;
+    bottom: 0px; }
+#rechtstext {
+    width: 90%; }
+
+
+/*KLASSEN*/ 
+.logo {
+    visibility: hidden;
+	display: none;}
+.einleitung {
+    font-size: 1.1em; }
+.left{
+   display: none; }
+.right{
+    visibility: visible;
+    width: 90%;
+    padding-left: 5px;
+    z-index: 1; }
+
+/*FORMULAR*/
+input, textarea {
+    padding: 5px;
+	width: 90%;
+	margin-left: 5px;  }
+textarea {
+	height: 60px;
+	max-width: 90%;
+	line-height: 10px;
+	margin-left: 5px;  }
+
+    
+}/*ENDE Desktop Layout bis 699px*/
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*Desktop Layout ab 700px*/
+
+@media only screen and (min-width: 700px) {
+    
+    
+/*SCHRIFTEN*/
+h1 {
+    font-size: 1.0em;  }
+h2 {
+    font-size: 1.2em;
+	width: 250px;    }
+p {
+    font-size: 1em;    }
+
+
+/*LISTEN*/
+dt {
+    float: left;
+    text-align: center;
+    display: block;
+    width: 18%;
+    padding: 5px 5px;
+    margin-left: 10px;
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.0);
+    box-shadow: 3px 3px 3px #7C7C7C;    }
+dd {
+    visibility: hidden;
+    display: none;
+    overflow: hidden;    }
+li, ul, .li_ohne {
+    font-size: 1em;    }
+    
+    
+/*MENUE*/
+nav {
+    top: 0px;
+	width: 100%;
+	height: 115px;
+    left: 250px; 
+    padding-top: 30px;    }
+nav ol {
+    margin: 0px;    }
+nav li {
+    padding: 1px 0px 0px 0px;
+    margin: 1px 0px 0px 0px;
+    box-shadow: 1px 1px 2px rgba(0,0,0, .8);}
+/*Liste ohne Bullets und Buttons nebeneinander*/
+nav ol li {
+    list-style: none;
+    float:left; }
+/*Aufbau und Groesse Buttons, Schriftfarbe*/
+nav ol li a {
+    display: block;
+    color: #333;
+    padding: 15px 20px 15px 20px; }
+/*Mouseover Hintergrund-, Schrift-Farben Menue*/   
+nav ol li.link:hover a, nav ol li.link:hover > ol li a{
+    background-color: #f63400; color: #fff; }
+/*Mouseover Schriftschnitt auf Bold*/    
+nav ol li:hover > a {
+    font-weight: bold;   }
+/*Untermenue wird sichtbar bei Mouseover*/
+nav ol li:hover > ol {
+    visibility: visible; }
+/*Untermenue*/
+nav ol li ol{
+    display: inline;
+    visibility: hidden;
+    position: absolute;
+    padding-left: 0px;}
+/*Ausrichtung Untermenue*/
+nav ol li ol li{
+	float: none; }
+/*Untermenue Mouseover*/
+nav ol li ol li a:hover{
+	color: #333 !important;
+	background-color: #FAFAFA !important; }
+
+
+/* BEREICHE */
+header {
+   	height: 80px;
+	background-color: rgba(255,255,255,0.7);
+	padding-left: 25px;  
+	z-index: 60;
+	box-shadow: 2px 2px 5px rgba(0,0,0, .6); }
+main {
+   	top: 80px;
+    width: 95%;
+	left: 25px;
+	margin: 25px 0px 0px 0px;
+	padding: 0px 0px 50px 0px;    }
+footer {
+    width: 95%;
+	left: 25px;
+    margin: 0px 0px 5px 0px;
+	padding: 0px 0px 0px 0px;    }
+cite {
+     font-size: 1em;    } 
+#funktion {
+    position: fixed;
+	bottom: 0px;
+    width: 20%;
+    right: 0px;
+    margin: 0px 0px 0px 20px;
+	padding: 0px 0px 5px 0px;
+	z-index: 85;	}
+#drucken {
+    float: left;
+    font-size: 12px;
+    text-decoration: underline;
+    padding-left: 20px;
+    color: #333 !important;
+    width: 45%;
+    bottom: 0px;  }
+#sidemap {
+    float: right;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #333 !important;
+    width: 40%;
+    bottom: 0px;  }
+#rechtstext {
+    width: 90%; }
+
+
+/*KLASSEN*/
+.logo {
+    visibility: visible;	}
+.einleitung {
+    font-size: 1em;    }
+.left{
+    display: none;  }
+.right{
+    visibility: visible;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;  }
+
+
+/*FORMULAR*/
+input, textarea {
+    padding: 10px;
+	width: 300px;  }
+textarea {
+	width: 400px;
+	height: 150px;
+	max-width: 300px;
+	line-height: 18px;  }
+
+}/*ENDE Desktop Layout ab 550px*/
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*Desktop Layout ab 1024px*/
+
+@media only screen and (min-width: 1024px) {
+    
+    
+body {
+    background-image: url(../image/bckgrnd.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;    }
+
+
+/*SCHRIFTEN*/
+h1 {
+    font-size: 1.0em;    }
+h2 {
+    font-size: 1.2em;	width: 250px;    }
+p {
+    font-size: 14px;    }
+
+
+/*LISTEN*/
+li, ul, .li_ohne {
+    font-size: 14px;    }
+li, .li_ohne > a:link {
+    font-size: 14px;    }
+
+
+/*MENUE*/
+nav {
+	top: 120px;
+	left: 0px;
+	width: 180px;
+	height: 100%;
+    padding-left: 15px; 
+	box-shadow: 2px 2px 2px #7C7C7C;    }
+nav ol {
+    box-shadow: 2px 2px 2px #dfdfdf;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+    padding-left: 0px;}
+/*Breite und Hintergrundfarbe Menuepunkte*/
+nav ol,nav ol li{
+    background-color: #FAFAFA;
+    width: 160px; }
+nav ol li a {
+    font-size: 12px;
+    border-top: 1px solid #fff;
+    padding: 5px 0px 5px 10px; }
+nav ol li:hover > a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FAFAFA; }
+/*maximale Hoehe des aufgeklappten Menue*/
+nav ol li:hover > ol {
+    max-height: 400px; }
+/*aufgeklapptes Untermenue*/
+nav ol li ol{
+    display: block;
+    position: relative;
+    max-height: 0px;  }
+/*Einrueckung Untermenue*/
+nav ol li ol li a {
+    margin-left:5px;
+    padding-left: 15px; }
+
+
+/* BEREICHE */
+header {
+   	height: 80px;
+	background-color: rgba(255,255,255,0.0);
+	padding-left: 25px;  
+	box-shadow: none;
+	z-index: 1;  }
+main {
+    top: 100px;
+   	width: 60%;
+	left: 200px;
+	margin: 25px 0px 0px 20px;
+	padding: 0px 0px 50px 10px;    }
+footer {
+    width: 60%;
+	left: 200px;
+    margin: 0px 0px 0px 30px;
+	padding: 0px 0px 0px 10px;    }
+#sidebar {
+    position: fixed;
+    top: 0px;
+    width: 15%;
+    right: 0px;
+    background-color:#f63400;
+    height: 100%;
+    box-shadow: -2px 2px 3px rgba(0,0,0, .6);  }
+#funktion {
+    position: fixed;
+	bottom: 0px;
+    width: 15%;
+    right: 0px;
+    margin: 0px 0px 0px 20px;
+	padding: 0px 0px 0px 0px;
+	z-index: 85;	}
+#drucken {
+    float: left;
+    font-size: 12px;
+    text-decoration: underline;
+    padding-left: 20px;
+    color: #fff !important;
+    width: 45%;
+    bottom: 0px; }
+#sidemap {
+    float: right;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #fff !important;
+    width: 40%;
+    bottom: 0px;  }
+#rechtstext {
+    width: 60%;  }
+
+
+/*KLASSEN*/
+.einleitung {
+    font-size: .9em;    }
+.left{
+    display: inline;
+    float: left;
+    width: 40%;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;  }
+.right{
+    visibility: visible;
+    float: right;
+    width: 50%;
+    padding-left: 30px;
+    padding-top: 10px;
+    margin: 0px;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.5);  }
+
+
+/*FORMULAR*/
+input, textarea {
+    padding: 10px;
+	width: 400px;  }
+textarea {
+	width: 400px;
+	height: 150px;
+	max-width: 400px;
+	line-height: 18px;  }
+
+}/*ENDE Desktop Layout ab 1024px*/
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*gilt fuer alle Aufloesungen ausser Print*/
+
+/* PSEUDO-KLASSEN */
+a:link,a:visited{color: #414141; text-decoration: none;}
+a:hover {color: #f63400; text-decoration: underline;}
+a:active {color: #f63400; text-decoration: none;}
+
+body {
+    background-color: #fff;     }
+
+
+/*SCHRIFTEN*/
+h1 {
+    color: #ddd;
+    background-color: #000;
+    font-family: 'Lato', verdana, sans-serif;
+	line-height: 120%;
+    padding: .25em 0em .25em .5em;
+    margin: 0em 0em 1em -5px;    }
+h2 {
+    color: #fff;
+  	background-color:#f63400;
+    transform: rotate(-3deg);
+    font-family: 'Paytone One', sans-serif;
+	font-weight: bolder;
+	line-height: 100%;
+    margin: 2em 0em 1.2em 0em;
+	border-radius: 0px;
+    padding: .3em 1.1em .1em .5em;
+    box-shadow: 2px 2px 5px rgba(0,0,0, .6);
+	z-index: 5;    }
+p {
+    color: #414141;
+    font-family: 'Lato', verdana, sans-serif;
+    width: 90%;    }
+p > a:link {
+    text-decoration: underline;    }
+    
+    
+/*LISTEN*/
+dt {
+	font-size: 1.2em;
+	font-weight: bold;
+    font-family: 'Paytone One', sans-serif;    }
+ul {
+    margin-left: 0px;
+    padding-left: 0px;
+    color: #5a5a5a;
+    font-family: 'Lato', verdana, sans-serif;    }    
+li {
+    list-style-image: url('../image/bullet.png');
+    padding: 10px 0px 5px 5px;
+    margin: 0px 0px 0px 15px;
+    color: #5a5a5a;
+    font-family: 'Lato', verdana, sans-serif;    }
+li > a:link {
+    text-decoration: underline;
+}
+
+
+/*MENUE*/   
+nav {
+	visibility: visible;
+    position: fixed;
+	z-index: 61;     }
+
+
+/*BEREICHE*/
+footer {
+    position: fixed;
+	bottom: 0px;
+	border-top: 1px solid rgba(212,55,0,0.7);
+	background-color: rgba(255,255,255,0.7);    }
+/*p wird innerhalb des Footers auf 12px geaendert*/
+footer > p {
+    font-size: 12px;  }
+/*alle Links sind unterstrichen*/
+footer p > a:link,a:visited {
+    text-decoration: underline; }
+header {
+	top: 0px;
+	position: fixed;
+	width: 100%;
+    padding-bottom: 15px; }
+main {
+    position: absolute;
+	overflow:auto;    	}
+figure {
+    padding: 10px 0px;
+    margin: 0px;  }
+figcaption{
+    color: #5a5a5a;
+    font-size: .9em;
+    font-family: 'Lato', verdana, sans-serif;
+    font-weight: bold;
+    margin-top: 10px;  }
+div#wrapper {
+    margin: 100px auto;  }
+div#content {
+    clear: both;
+    margin-top: 100px;  }
+    
+    
+/*ZITATE*/
+cite {
+    display: block;
+    font-style: normal;
+    color: #414141;  
+    line-height: 50px;}
+cite > a:link {
+    text-decoration: underline;}
+
+
+/*KLASSEN*/
+.einleitung {
+    color: #f63400;
+    font-family: 'Lato', verdana, sans-serif;
+    font-weight: bold;
+    width: 90%;    }
+.einleitung > a {
+    color: #f63400;
+    text-decoration: underline;   }
+.li_ohne {
+    list-style-type: none; 
+    list-style-image: none;
+    padding: 0px 5px 5px 5px;
+    margin: 0px 0px 10px 5px;
+    color: #5a5a5a;
+    font-family: 'Lato', verdana, sans-serif;
+    background-color: rgba(255,255,255,0.5);
+    border-bottom: 1px solid #000;    }
+.li_ohne > a:link {
+    text-decoration: none;}
+.shadow {
+    box-shadow: 3px 3px 3px #7C7C7C;    }
+.totop {
+    float: right;
+    margin-right: 10px;
+    padding-right: 10px;
+    background-repeat: no-repeat;  }
+.wrapper {
+    width: 97%;
+    margin: 0px;  }
+.logo {
+    visibility: visible;
+	position: fixed;
+	top: 0px;
+	width: 200px;
+	height: 80px;
+	visibility:visible; 
+	background-color: rgba(255,255,255,0.0);
+	z-index: 1;
+	padding: 0px;
+	margin: 0px;	}
+	
+	
+/*FORMULAR*/
+input, textarea {
+  	display: block;
+	color: #999999;
+	border: 1px solid #5a5a5a;
+	margin-bottom: 10px;   }
+.form label {
+	color: #999999;  }
+input#submit {
+	display: block;
+	width: 100px; 
+	height: 40px;
+	border: none;
+	transform: rotate(-3deg);
+	font-family: 'Paytone One', sans-serif;
+	background-color: #f63400; 
+	color: #FFF;  	}  
+fieldset {
+    border: none;
+    padding: 0px;
+    margin: 20px 0px;  }
+#teaser {
+    width: 80%;
+    float: right;
+    transform: rotate(-3deg);
+    background-color: #ff0000;
+    border-bottom: 1px solid #000;  }
+/*Text im Impressum*/
+#rechtstext {
+    margin-bottom: 30px;  }
+#rechtstext > p {
+    font-size: 9px;  }
+
+
+/*MEMOMRY SPIEL*/
+div#spielfeld{
+    visibility: hidden;
+    background-color: rgba(255,255,255,0.7);
+	width:90%;
+	height:300px;
+	padding:5px;
+	margin:10px auto; }
+div#spielfeld > div{
+    background: url(../image/memory/memory.jpg) no-repeat;
+	border:1px solid #333;
+	width:60px;
+	height:60px;
+	float:left;
+	margin:5px;
+	font-size:64px;
+	cursor:pointer;
+	text-align:center;
+	box-shadow: 0px 2px 3px #7C7C7C;  }
+#level > p  {
+    margin-top: 5px;}
+#meldung {
+    position: absolute;
+    visibility: hidden;
+    margin-left: 20%;
+    padding: 20px;
+    font-weight: bold;
+    color: #fff;
+    transform: rotate(-3deg);
+    z-index: 10;
+    background-color: #f63400;
+    box-shadow: 0px 2px 3px #7C7C7C; }
+#meldung > h3 {
+    margin: 0px 0px 10px 0px;
+    font-size: 30px;}
+#meldung > p  {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px; 
+    text-decoration: underline;
+    color: #fff;}
+#meldung a {color: #fff;}
+#meldung p:hover > a {
+    color: #fff;}
+#titelbild_spiel > img{
+    width:100%;}
+.counter {
+    position: absolute;
+    bottom: 20px; }
+
+/*Klasse fuer Spiel, Option Neustart wird erst waehrend des Spiels angezeigt*/
+#neustart {
+    visibility: hidden; }
+    
+ 
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media print {
+body {
+    background-color: #fff;    }
+    
+    
+/* PSEUDO-KLASSEN */
+a:link,a:visited, a:hover, a:active{color: #000; text-decoration: underline;}
+a:after{content:" (" attr(href) ") ";font-size:0.8em;font-weight:normal;}
+
+
+/*SCHRIFTEN*/
+h1 {
+    color: #000;
+    font-size: 1.5em;
+    font-family: 'Lato', verdana, sans-serif;
+	line-height: 120%;
+	font-weight: bolder;
+    padding: 0em;
+    margin: 0em;
+    box-shadow: none;    }
+h2 {
+    color: #000;
+  	font-size: 1em;
+  	transform: rotate(0deg);
+	width: 80%;
+    font-family: 'Paytone One', sans-serif;
+	font-weight: bolder;
+	box-shadow: none;	}
+p {
+    color: #000;
+    font-size: .8em;
+    font-family: 'Lato', verdana, sans-serif;
+    width: 90%;    }
+
+
+/*LISTEN*/
+dl, dt, dd {
+    display: none;    }
+ul {
+   margin-left: 0px;
+   padding-left: 0px;    }
+li {
+    list-style-image: url('../image/bullet_print.png');
+    padding: 0px 0px 5px 5px;
+    margin: 0px 0px 0px 15px;    }
+
+
+/* BEREICHE */
+header, nav, footer {
+	display: none;    }
+main {
+    position: absolute;
+	top: 0px;
+	background-color: rgba(255,255,255,0.0);
+    width: 100%;
+	left: 0px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 5px;    }
+figcaption{
+    color: #000;
+    font-size: 0.7em;
+    font-family: 'Lato', verdana, sans-serif;
+    font-weight: bold;
+    margin-top: 10px;  }
+#drucken, #sidemap, #rechtstext {
+    visibility: hidden;  }
+hr {
+    border: 1px solid #000;    }
+    
+    
+/*KLASSEN*/
+.einleitung {
+    color: #000;
+    font-size: .8em;
+    font-family: 'Lato', verdana, sans-serif;
+    font-weight: bold;
+    width: 90%;    }
+.li_ohne {
+   list-style-type: none; 
+   list-style-image: none;
+   padding: 0px 0px 5px 0px;
+   margin: 0px 0px 0px 5px;    }
+.logo,  .left {
+    display: none;  }
+.wrapper {
+    width: 97%;
+    margin: 0px; }
+.right{
+    visibility: visible;
+    display: inline;
+    width: 90%;
+    padding-left: 5px;
+    z-index: 1; }
+.totop {
+    display: none;  }
+.shadow {
+    box-shadow: none;    }
+    
+    
+/*FORMULAR*/
+input, textarea {
+    display: block;
+	padding: 5px;
+	border: 1px solid #000;
+	width: 90%;
+	color: #000;
+	margin-left: 5px;  }
+textarea {
+	width: 400px;
+	height: 100px;
+	max-width: 90%;
+	line-height: 10px;
+	margin-left: 5px;  }
+.form label {
+	color: #000;  }
+input#submit {
+	transform: none;
+	background-color: #fff; 
+	border: 1px solid #000;	}
+}/*Ende Print*/

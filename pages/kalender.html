@@ -1,0 +1,129 @@
+<html>
+<head>
+  <title>Monatskalender</title>
+</head>
+<body>
+
+  <h1 style="font-family:Verdana,Arial; font-weight:normal">Monatskalender</h1>
+
+  <script type="text/javascript">
+
+    var d = new Date();
+    var dm = d.getMonth() + 1;
+    var dj = d.getYear();
+
+    if (dj < 999) dj += 1900;
+
+    Kalender(dm, dj);
+
+    function Kalender (Monat, Jahr) {
+
+      Monatsname = new Array("Januar", "Februar", "März", "April", "Mai", "Juni",
+                             "Juli", "August", "September", "Oktober", "November", "Dezember");
+      Tag = new Array("Mo", "Di", "Mi", "Do", "Fr", "Sa", "So");
+
+      var KSchrArt = "Verdana,Arial";  // Schriftart Kalenderkopf 
+      var KSchrGroesse = 3;            // Schriftgroesse 1-7 Kalenderkopf
+      var KSchrFarbe = "#FFFF00";      // Schriftfarbe Kalenderkopf
+      var Khgrund = "#000066";         // Hintergrundfarbe Kalenderkopf
+      var TSchrArt = "Verdana,Arial";  // Schriftart Tagesanzeige
+      var TSchrGroesse = 3;            // Schriftgroesse 1-7 Tagesanzeige
+      var TSchrFarbe = "#000000";      // Schriftfarbe Tagesanzeige
+      var Thgrund = "#D0F0F0";         // Hintergrundfarbe Tagesanzeige
+      var SoFarbe = "#E00000";         // Schriftfarbe f. Sonntage
+      var Ahgrund = "#FFFF00";         // Hintergrundfarbe für heutigen Tag
+
+      var jetzt = new Date();
+      var DieserMonat = jetzt.getMonth() + 1;
+      var DiesesJahr = jetzt.getYear();
+
+      if (DiesesJahr < 999) DiesesJahr += 1900;
+
+      var DieserTag = jetzt.getDate();
+      var Zeit = new Date(Jahr, Monat - 1, 1);
+      var Start = Zeit.getDay();
+
+      if (Start > 0) {
+       Start--;
+      } else {
+        Start = 6;
+      }
+
+      var Stop = 31;
+
+      if (Monat == 4 || Monat == 6 || Monat == 9 || Monat == 11) --Stop;
+
+      if (Monat == 2) {
+                      Stop = Stop-3;
+        if (Jahr %   4 == 0) Stop++;
+        if (Jahr % 100 == 0) Stop--;
+        if (Jahr % 400 == 0) Stop++;
+      }
+
+      document.write('<table border="3" cellpadding="1" cellspacing="1">');
+
+      var Monatskopf = Monatsname[Monat - 1] + " " + Jahr;
+        SchreibeKopf(Monatskopf, Khgrund, KSchrFarbe, KSchrGroesse, KSchrArt);
+      var Tageszahl = 1;
+
+      for (var i = 0; i <= 5; i++) {
+
+        document.write("<tr>");
+
+        for (var j = 0; j <= 5; j++) {
+          if ((i == 0) && (j < Start)) {
+            SchreibeZelle(" ", Thgrund, TSchrFarbe, TSchrGroesse, TSchrArt);
+          } else {
+            if (Tageszahl > Stop) {
+              SchreibeZelle(" ", Thgrund, TSchrFarbe, TSchrGroesse, TSchrArt);
+            } else {
+              if ((Jahr == DiesesJahr) && (Monat == DieserMonat) && (Tageszahl == DieserTag)) {
+                SchreibeZelle(Tageszahl, Ahgrund, TSchrFarbe, TSchrGroesse, TSchrArt);
+              } else {
+                SchreibeZelle(Tageszahl, Thgrund, TSchrFarbe, TSchrGroesse, TSchrArt);
+              }
+                Tageszahl++;
+            }
+          }
+        }
+
+        if (Tageszahl > Stop) {
+          SchreibeZelle(" ", Thgrund, SoFarbe, TSchrGroesse, TSchrArt);
+        } else {
+          if ((Jahr == DiesesJahr) && (Monat == DieserMonat) && (Tageszahl == DieserTag)) {
+            SchreibeZelle(Tageszahl, Ahgrund, SoFarbe, TSchrGroesse, TSchrArt);
+          } else {
+            SchreibeZelle(Tageszahl, Thgrund, SoFarbe, TSchrGroesse, TSchrArt);
+          }
+            Tageszahl++;
+        }
+          document.write("<\/tr>");
+      }
+        document.write("<\/table>");
+    }
+
+    function SchreibeKopf (Monatstitel, HgFarbe, SchrFarbe, SchrGroesse, SchrArt) {
+
+      document.write("<tr>");
+      document.write('<td align="center" colspan="7" valign="middle" bgcolor="' + HgFarbe + '">');
+      document.write('<font size="' + SchrGroesse + '" color="' + SchrFarbe + '" face="' + SchrArt + '"><b>');
+      document.write(Monatstitel);
+      document.write("<\/b><\/font><\/td><\/tr>");
+      document.write("<tr>");
+
+      for (var i = 0; i <= 6; i++)
+        SchreibeZelle(Tag[i], HgFarbe, SchrFarbe, SchrGroesse, SchrArt);
+        document.write("<\/tr>");
+    }
+
+    function SchreibeZelle (Inhalt, HgFarbe, SchrFarbe, SchrGroesse, SchrArt) {
+      document.write('<td align="center" valign="middle" bgcolor="' + HgFarbe + '">');
+      document.write('<font size="' + SchrGroesse + '" color="' + SchrFarbe + '" face="' + SchrArt + '"><b>');
+      document.write(Inhalt);
+      document.write("<\/b><\/font><\/td>");
+    }
+
+  </script>
+
+</body>
+</html>
